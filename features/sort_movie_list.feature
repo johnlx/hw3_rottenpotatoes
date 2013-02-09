@@ -23,9 +23,11 @@ Background: movies have been added to database
 
 Scenario: sort movies alphabetically
   When I follow "Movie Title"
-  # your steps here
+  Then I should see "Chicken Run" before "The Terminator"
+  And I should see "Aladdin" before "Raiders of the Lost Ark"
 
 Scenario: sort movies in increasing order of release date
   When I follow "Release Date"
-  # your steps here
+  Then I should see "1981" before "1992"
+  And I should see "1968" before "1981"
 
