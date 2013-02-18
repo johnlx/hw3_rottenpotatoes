@@ -41,4 +41,9 @@ Then /I should see all of the movies/ do
   Movie.all.count.should == @movies_count
 end
 
+Then /^the director of "(.*?)" should be "(.*?)"$/ do |movie_title, director_name|
+  movie = Movie.find_by_title(movie_title)
+  movie.director.should == director_name
+end
+
 

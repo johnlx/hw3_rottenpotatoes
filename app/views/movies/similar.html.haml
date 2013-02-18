@@ -1,0 +1,7 @@
+-#  This file is app/views/movies/similar.html.haml
+%h1 Movies Directed By #{@movie.director}
+
+%table#movies
+  - @movies.each do |movie|
+    %tr
+      %td= link_to movie.title, movie_path(movie)
